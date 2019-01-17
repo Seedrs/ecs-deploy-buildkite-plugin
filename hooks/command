@@ -9,16 +9,16 @@ main() {
     if [[ -n ${cluster} && -n ${service} ]]; then
         echo "--- :ecs: Deploying ${service}"
         aws ecs update-service \
-            --cluster ${cluster}  \
-            --service ${service} \
+            --cluster "${cluster}" \
+            --service "${service}" \
             --force-new-deployment \
-            --region ${region}
+            --region "${region}"
 
         echo "--- :ecs: Waiting for ${service} desired service state"
         aws ecs wait services-stable \
-            --cluster ${cluster}  \
-            --services ${service} \
-            --region ${region}
+            --cluster "${cluster}" \
+            --services "${service}" \
+            --region "${region}"
 
         echo "--- :ecs: Service ${service} is up :rocket:"
     else
