@@ -1,0 +1,17 @@
+name: ECS Deploy
+description: Deploys
+author: https://github.com/Seedrs
+requirements:
+  - aws
+configuration:
+  properties:
+    cluster:
+      type: string
+    service:
+      type: string
+    region:
+      type: string
+  required:
+    - cluster
+    - service
+
