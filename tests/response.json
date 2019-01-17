@@ -1,0 +1,54 @@
+{
+  "service": {
+      "serviceArn": "arn:aws:ecs:eu-west-1:123456789012:service/my-service",
+      "serviceName": "my-service",
+      "clusterArn": "arn:aws:ecs:eu-west-1:123456789012:cluster/staging",
+      "loadBalancers": [],
+      "serviceRegistries": [],
+      "status": "ACTIVE",
+      "desiredCount": 1,
+      "runningCount": 1,
+      "pendingCount": 0,
+      "launchType": "EC2",
+      "taskDefinition": "arn:aws:ecs:eu-west-1:123456789012:task-definition/my-service:3",
+      "deploymentConfiguration": {
+          "maximumPercent": 200,
+          "minimumHealthyPercent": 100
+      },
+      "deployments": [
+          {
+              "id": "ecs-svc/9223370489204405830",
+              "status": "PRIMARY",
+              "taskDefinition": "arn:aws:ecs:eu-west-1:123456789012:task-definition/my-service:3",
+              "desiredCount": 1,
+              "pendingCount": 0,
+              "runningCount": 0,
+              "createdAt": 1547650369.976,
+              "updatedAt": 1547650369.976,
+              "launchType": "EC2"
+          },
+          {
+              "id": "ecs-svc/9223370489207391277",
+              "status": "ACTIVE",
+              "taskDefinition": "arn:aws:ecs:eu-west-1:123456789012:task-definition/my-service:3",
+              "desiredCount": 1,
+              "pendingCount": 0,
+              "runningCount": 1,
+              "createdAt": 1547647384.529,
+              "updatedAt": 1547647457.666,
+              "launchType": "EC2"
+          }
+      ],
+      "events": [
+          {
+              "id": "550ebf63-8357-47c2-b833-f0c63342a780",
+              "createdAt": 1547647563.969,
+              "message": "(service my-service) has reached a steady state."
+          }
+      ],
+      "createdAt": 1537809057.066,
+      "placementConstraints": [],
+      "placementStrategy": [],
+      "schedulingStrategy": "REPLICA"
+  }
+}
